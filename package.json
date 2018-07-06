@@ -1,9 +1,9 @@
 {
-  "name": "danielsogl-cordova-plugin-clipboard",
-  "version": "1.0.2",
+  "name": "@fairmanager/cordova-plugin-clipboard",
+  "version": "1.0.3",
   "description": "Clipboard management plugin for Cordova/PhoneGap",
   "cordova": {
-    "id": "com.danielsogl.cordova.clipboard",
+    "id": "@fairmanager/cordova-plugin-clipboard",
     "platforms": [
       "ios",
       "android",
