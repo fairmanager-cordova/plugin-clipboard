@@ -1,0 +1,10 @@
+# We hate WebStorm now
+.idea/
+
+# npm modules
+node_modules/
+
+# npm/yarn debug output
+debug.log
+package-lock.json
+yarn-error.log
