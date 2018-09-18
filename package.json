@@ -1,21 +1,9 @@
 {
   "name": "fairmanager-cordova-plugin-clipboard",
-  "description": "Clipboard management plugin for Cordova/PhoneGap",
   "version": "1.1.1",
-  "homepage": "https://github.com/fairmanager-cordova/plugin-clipboard#readme",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/fairmanager-cordova/plugin-clipboard.git"
-  },
-  "cordova": {
-    "id": "fairmanager-cordova-plugin-clipboard",
-    "platforms": [
-      "ios",
-      "android",
-      "wp8",
-      "windows"
-    ]
-  },
+  "description": "Clipboard management plugin for Cordova/PhoneGap",
+  "license": "MIT",
+  "author": "Daniel Sogl",
   "keywords": [
     "clipboard",
     "copy",
@@ -26,6 +14,27 @@
     "cordova-wp8",
     "cordova-windows"
   ],
-  "author": "Daniel Sogl",
-  "license": "MIT"
+  "homepage": "https://github.com/fairmanager-cordova/plugin-clipboard",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fairmanager-cordova/plugin-clipboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fairmanager-cordova/plugin-clipboard/issues"
+  },
+  "cordova": {
+    "id": "fairmanager-cordova-plugin-clipboard",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "4.12.0",
+    "eslint-plugin-promise": "3.6.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }
