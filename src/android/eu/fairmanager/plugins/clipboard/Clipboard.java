@@ -1,4 +1,4 @@
-package com.danielsogl.cordova.clipboard;
+package eu.fairmanager.plugins.clipboard;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
@@ -13,7 +13,7 @@ import android.content.ClipData;
 import android.content.ClipDescription;
 
 public class Clipboard extends CordovaPlugin {
-  
+
   private static final String actionCopy = "copy";
   private static final String actionPaste = "paste";
 
