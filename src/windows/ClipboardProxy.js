@@ -1,40 +1,43 @@
-var cordova = require('cordova');
+"use strict";
+
+/* global Windows */
 
 module.exports = {
+	copy : ( successCallback, errorCallback, args ) => {
+		let text = "";
+		try {
+			text = args[ 0 ];
+		} catch( e ) {
+			errorCallback( e );
+			return;
+		}
 
-  copy: function(successCallback, errorCallback, args) {
-    var text = "";
-    try {
-      text = args[0];
-    } catch (e) {
-      errorCallback(e);
-      return;
-    }
+		try {
+			const dataPackage = new Windows.ApplicationModel.DataTransfer.DataPackage();
+			dataPackage.setText( text );
+			Windows.ApplicationModel.DataTransfer.Clipboard.setContent( dataPackage );
+			successCallback( text );
+		} catch( e ) {
+			errorCallback( e );
+		}
+	},
+	paste : ( successCallback, errorCallback, args ) => {
+		let text = "";
 
-    try {
-      var dataPackage = new Windows.ApplicationModel.DataTransfer.DataPackage();
-      dataPackage.setText(text);
-      Windows.ApplicationModel.DataTransfer.Clipboard.setContent(dataPackage);
-      successCallback(text);
-    } catch (e) {
-      errorCallback(e);;
-    }
-  },
-  paste: function(successCallback, errorCallback, args) {
-    var text = "";
+		try {
+			const dataPackageView = Windows.ApplicationModel.DataTransfer.Clipboard.getContent();
+			if( dataPackageView.contains( Windows.ApplicationModel.DataTransfer.StandardDataFormats.text ) ) {
+				dataPackageView.getTextAsync().then( value => {
+					text = value;
+					successCallback( text );
+					return null;
+				} )
+					.catch( error => errorCallback( error ) );
+			}
+		} catch( e ) {
+			errorCallback( e );
+		}
+	}
+};
 
-    try {
-      var dataPackageView = Windows.ApplicationModel.DataTransfer.Clipboard.getContent();
-      if (dataPackageView.contains(Windows.ApplicationModel.DataTransfer.StandardDataFormats.text)) {
-        dataPackageView.getTextAsync().then(function(value) {
-          text = value;
-          successCallback(text);
-        });
-      }
-    } catch (e) {
-      errorCallback(e);;
-    }
-  }
-}; // exports
-
-require("cordova/exec/proxy").add("Clipboard", module.exports);
+require( "cordova/exec/proxy" ).add( "Clipboard", module.exports );

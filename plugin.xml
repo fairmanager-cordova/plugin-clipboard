@@ -35,12 +35,12 @@
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
 			<feature name="Clipboard">
-				<param name="ios-package" value="CDVClipboard" />
+				<param name="ios-package" value="FMClipboard" />
 			</feature>
 		</config-file>
 
-		<header-file src="src/ios/CDVClipboard.h" />
-		<source-file src="src/ios/CDVClipboard.m" />
+		<header-file src="src/ios/FMClipboard.h" />
+		<source-file src="src/ios/FMClipboard.m" />
 	</platform>
 
 	<platform name="windows">

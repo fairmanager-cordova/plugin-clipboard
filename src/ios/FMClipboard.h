@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface CDVClipboard : CDVPlugin {}
+@interface FMClipboard : CDVPlugin {}
 
 - (void)copy:(CDVInvokedUrlCommand*)command;
 - (void)paste:(CDVInvokedUrlCommand*)command;
