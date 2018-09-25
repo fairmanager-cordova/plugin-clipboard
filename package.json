@@ -1,6 +1,6 @@
 {
   "name": "fairmanager-cordova-plugin-clipboard",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Clipboard management plugin for Cordova/PhoneGap",
   "license": "MIT",
   "author": "Daniel Sogl",
