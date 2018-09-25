@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<plugin id="fairmanager-cordova-plugin-clipboard" version="1.2.1"
+<plugin id="fairmanager-cordova-plugin-clipboard" version="1.2.2"
 	xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
 	<name>Clipboard Plugin</name>
@@ -35,12 +35,12 @@
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
 			<feature name="Clipboard">
-				<param name="ios-package" value="CDVClipboard" />
+				<param name="ios-package" value="FMClipboard" />
 			</feature>
 		</config-file>
 
-		<header-file src="src/ios/CDVClipboard.h" />
-		<source-file src="src/ios/CDVClipboard.m" />
+		<header-file src="src/ios/FMClipboard.h" />
+		<source-file src="src/ios/FMClipboard.m" />
 	</platform>
 
 	<platform name="windows">
